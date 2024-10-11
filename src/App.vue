@@ -1,7 +1,7 @@
 <script setup>
 import gsap from 'gsap';
 import TheHeader from './components/views/TheHeader.vue';
-import ContentItems from './components/views/ContentItems.vue';
+import ContentItems from './components/ContentItems.vue';
 import { onMounted } from 'vue';
 
 </script>

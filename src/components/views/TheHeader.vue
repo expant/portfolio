@@ -11,7 +11,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <header class="fixed w-full flex justify-between items-center px-10 py-5 font-pirata bg-transparent">
+  <header class="fixed w-full flex justify-between items-center px-5 py-2.5 font-pirata bg-transparent md:px-10 md:py-5">
     <base-button-nav-item>projects</base-button-nav-item>
     <BaseButtonLogo />
     <base-button-nav-item>about</base-button-nav-item>
