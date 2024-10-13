@@ -7,7 +7,7 @@ import { onMounted } from 'vue';
 </script>
 
 <template>
-  <div class="h-screen bg-green-50 text-[#333]">
+  <div class="bg-green-50 text-[#333]">
     <TheHeader />
     <ContentItems />
   </div>
