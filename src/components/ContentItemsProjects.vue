@@ -41,24 +41,24 @@ const showImage = gsap.to('.img-item', { width: '600px', duration: 2 });
 
 <template>
   <section class="h-screen py-4 px-5 md:py-20 md:px-10">
-    <ul class="h-full flex flex-col justify-center gap-y-20">
+    <ul class="h-full flex flex-col justify-center items-start gap-y-20">
       <li 
         class="relative"
         @mouseover="showImage.play()"
         @mouseleave="showImage.reverse()"
-        v-for="{id, title, imageName} in projects"
+        v-for="{id, title} in projects"
         :key="id"
       >
         <a href="#">
           <span
-            class="font-main text-7xl uppercase" 
+            class="font-montserrat text-green-50 text-lg md:text-4xl lg:text-5xl xl:text-7xl uppercase mix-blend-difference" 
             :data-text="title"
           >
           {{ title }}
-        </span>
+          </span>
         </a>
         <!-- <ContentProjectsImage :imageName="imageName" :mouse="mouse" /> -->
-        <span class="img-item absolute inline-block w-0">
+        <!-- <span class="img-item absolute inline-block w-0">
           <img 
             v-if="imageName === 'rss'" 
             src="@/assets/projects/rss.jpg" 
@@ -79,7 +79,7 @@ const showImage = gsap.to('.img-item', { width: '600px', duration: 2 });
             src="@/assets/projects/yourtour.jpg" 
             :alt="imageName"
           >
-        </span>
+        </span> -->
       </li>
       
     </ul>
