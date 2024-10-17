@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import BaseButtonProject from './BaseButtonProject.vue';
 import ContentProjectsImage from './ContentProjectsImage.vue';
 import { onMounted, reactive, ref } from 'vue';
+import ScrollTrigger from 'gsap/src/ScrollTrigger';
 
 const projects = [
   { 
@@ -27,30 +28,41 @@ const projects = [
   },
 ];
 
-// const mouse = reactive({
-//   over: false,
-//   leave: false,
-// })
-
 onMounted(() => {
-
+  gsap.from('.animate .line', {
+    y: 500,
+    x: 1000,
+    rotation: 90,
+    opacity: 0,
+    duration: 2,
+    ease: 'Second.in',
+    stagger: 0.1,
+    scrollTrigger: {
+      trigger: '.animate',
+      start: 'top center',
+      end: 'center center',
+      markers: true,
+      scrub: 2,
+      toggleActions: 'restart pause reverse none',
+    },
+  });
 })
-
 </script>
 
 <template>
-  <section class="h-screen py-4 px-5 md:py-20 md:px-10">
+  <section class="animate h-screen py-4 px-5 md:py-20 md:px-10">
     <ul class="h-full flex flex-col justify-center items-start gap-y-20">
       <li 
         class="relative"
-        @mouseover="showImage.play()"
-        @mouseleave="showImage.reverse()"
+        @mouseover="activeIcon = true"
+        @mouseleave="activeIcon = false"
         v-for="{id, title} in projects"
         :key="id"
       >
         <a href="#">
           <span
             :class="[
+              'line',
               'inline-block font-montserrat bg-yellow-400 text-lg p-3 uppercase bg-transparent', 
               'md:text-4xl lg:text-5xl xl:text-7xl',
             ]" 
@@ -85,6 +97,20 @@ onMounted(() => {
       </li>
       
     </ul>
+  </section>
+  <section class="px-10">
+    <h1 class="text-center text-8xl">ABOUT</h1>
+    <p class="text-center text-6xl my-10">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto eveniet consectetur veniam a eius, laudantium libero est dignissimos quaerat repellat ullam accusantium sapiente veritatis quae temporibus quibusdam ea blanditiis? Repudiandae?
+    </p>
+    <h1 class="text-center text-8xl">ABOUT</h1>
+    <p class="text-center text-6xl">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto eveniet consectetur veniam a eius, laudantium libero est dignissimos quaerat repellat ullam accusantium sapiente veritatis quae temporibus quibusdam ea blanditiis? Repudiandae?
+    </p>
+    <h1 class="text-center text-8xl">ABOUT</h1>
+    <p class="text-center text-6xl">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto eveniet consectetur veniam a eius, laudantium libero est dignissimos quaerat repellat ullam accusantium sapiente veritatis quae temporibus quibusdam ea blanditiis? Repudiandae?
+    </p>
   </section>
 </template>
 
