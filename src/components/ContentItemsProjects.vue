@@ -33,10 +33,9 @@ const projects = [
 // })
 
 onMounted(() => {
- 
+
 })
 
-const showImage = gsap.to('.img-item', { width: '600px', duration: 2 });
 </script>
 
 <template>
@@ -51,7 +50,10 @@ const showImage = gsap.to('.img-item', { width: '600px', duration: 2 });
       >
         <a href="#">
           <span
-            class="font-montserrat text-green-50 text-lg md:text-4xl lg:text-5xl xl:text-7xl uppercase mix-blend-difference" 
+            :class="[
+              'inline-block font-montserrat bg-yellow-400 text-lg p-3 uppercase bg-transparent', 
+              'md:text-4xl lg:text-5xl xl:text-7xl',
+            ]" 
             :data-text="title"
           >
           {{ title }}
