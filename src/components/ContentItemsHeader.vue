@@ -50,15 +50,15 @@ onMounted(() => {
   <section class="h-screen flex flex-col justify-center items-center py-8 uppercase">
     <div class="max-w-8xl w-full">
       <h1 class="title-1 px-8 w-full font-main text-7xl text-left opacity-0 md:text-9xl lg:text-[12rem] xl:text-[15rem]">Elagin</h1>
-      <section :class="[
+      <section ref="marquee" :class="[
         'marquee',
         'flex w-full overflow-hidden font-montserrat text-2xl text-[#333] gap-x-5 bg-yellow-400', 
         'md:text-4xl lg:text-7xl xl:text-8xl',
       ]">
-        <div class="marquee-content min-w-full flex-auto flex-grow-0 flex-shrink-0 gap-5">
+        <div ref="marqueeContent" class="marquee-content min-w-full flex-auto flex-grow-0 flex-shrink-0 gap-5">
           <div>Frontend-разработка</div>
         </div>
-        <div class="marquee-content min-w-full flex-auto flex-grow-0 flex-shrink-0 gap-5">
+        <div ref="marqueeContent" class="marquee-content min-w-full flex-auto flex-grow-0 flex-shrink-0 gap-5">
           <div>Frontend-разработка</div>
         </div>
       </section>

@@ -4,7 +4,7 @@ import gsap from 'gsap';
 defineProps({
   size: String,
   colorA: String,
-  colorE: String,
+  colorB: String,
   gap: String,
 });
 </script>

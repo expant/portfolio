@@ -23,8 +23,7 @@ onMounted(() => {
       href="#"
       :class="[
         `project-${props.id} line`,
-        'inline-block font-montserrat text-lg p-3 uppercase bg-yellow-400 transition-all',
-        'hover:bg-[#333] hover:text-[#fff]',
+        'inline-block font-montserrat text-lg p-3 uppercase bg-yellow-400',
         'md:text-4xl lg:text-5xl xl:text-7xl',
       ]" 
     >

@@ -13,18 +13,17 @@ const projects = [
 
 const showProjects = () => {
   gsap.from('.animate .line', {
-    y: 500,
-    x: 1000,
+    y: 200,
+    x: -1000,
     rotation: 90,
     opacity: 0,
-    duration: 2,
+    duration: 1,
     ease: 'Second.in',
     stagger: 0.1,
     scrollTrigger: {
       trigger: '.animate',
       start: 'top center',
       end: 'center center',
-      markers: true,
       scrub: 2,
       toggleActions: 'restart pause reverse none',
     },
@@ -39,7 +38,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="animate h-screen py-4 px-5 md:py-20 md:px-10">
+  <section id="trigger-projects" class="animate h-screen py-4 px-5 md:py-20 md:px-10">
     <ul class="h-full flex flex-col justify-center items-start gap-y-20">
       <content-items-projects-item
         v-for="{id, title} in projects"
