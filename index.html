@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PORTFOLIO | ELAGIN ANTON</title>
+  </head>
+  <body class="overflow-hidden bg-black">
+    <!-- curstom cursor -->
+    <!-- <div id="cursor" class="absolute opacity-0 w-4 h-4 border border-solid border-black rounded-full bg-red-600 z-50"></div> -->
+
+    <!-- loader -->
+    <div id="preloaderWrap" class="flex justify-center items-center w-screen h-screen bg-red-600 z-50">
+      <div id="preloader" class="absolute flex justify-center items-center w-[100px] h-[100px] bg-black rounded-full font-BebasNeue text-3xl text-red-600">
+        <div id="preloaderText">0%</div>
+      </div>
+    </div>
+
+    <!-- mobile navigation -->
+    <div class="main-container opacity-0">
+      <div id="mobile-nav-wrap" class="fixed flex w-screen h-screen justify-center items-center bg-[#010101] z-40 md:hidden">
+        <button id="nav-close" class="absolute w-7 h-7 right-7 top-7 p-1 bg-red-600">
+          <img class="w-full h-full" src="./src/assets/close.svg" alt="close">
+        </button>
+        <nav class="flex flex-col gap-5 font-BebasNeue text-7xl text-red-600">
+          <button class="transition-all hover:text-white">Projects</button>
+          <button class="transition-all hover:text-white">Contact</button>
+          <button class="transition-all hover:text-white">About</button>
+        </nav>
+      </div>
+      <div id="main-wrap" class="h-screen bg-[#010101] text-white">
+        <header class="fixed w-full flex justify-center py-10 z-20">
+          <div class="w-4/5 flex justify-between">
+            <a href="./">
+              <span class="uppercase pointer">
+                <span id="firstName" class="text-red-500 text-xl">Elagin</span>
+                Anton
+              </span>
+            </a>
+            <nav id="nav" class="hidden text-lg md:flex md:text-xl lg:text-2xl text-right gap-5 uppercase">
+              <button class="relative flex justify-center items-center px-2 py-1">
+                <span class="w-full z-20 uppercase">Projects</span>
+                <div class="absolute left-0 h-full bg-red-600"></div>
+              </button>
+              <button class="relative flex justify-center items-center px-2 py-1">
+                <span class="w-full z-20 uppercase">Contact</span>
+                <div class="absolute left-0 h-full bg-red-600"></div>
+              </button>
+              <button class="active-nav relative flex justify-center items-center px-2 py-1">
+                <span class="w-full z-20 uppercase">About</span>
+                <div class="absolute left-0 h-full bg-red-600"></div>
+              </button>
+            </nav>
+            <!-- mobile nav icon -->
+            <button id="nav-menu" class="active-nav-icon w-7 h-7 md:hidden">
+              <img
+                class="w-full h-full fill-white"
+                src="./src/assets/menu.svg" alt="menu"
+              >
+            </button>
+          </div>
+        </header>
+        <!-- main -->
+        <div id="content-wrap" class="flex h-full overflow-hidden">
+          <!-- projects -->
+          <div id="projects" class="hidden justify-center items-center w-screen h-full">
+            <div id="projects-list" class="flex flex-col gap-y-5 font-BebasNeue text-4xl text-red-600
+            md:text-6xl xl:text-8xl">
+              <div>
+                <a href="https://frontend-project-11-weld-mu.vercel.app/" class="transition-all hover:text-white">RSS-Agregator</a>
+              </div>
+              <div>
+                <a href="https://notes-list-psi.vercel.app/" class="transition-all hover:text-white">Notes List</a>
+              </div>
+              <div>
+                <a href="https://github.com/expant/frontend-project-46" class="transition-all hover:text-white">Difference generation</a>
+              </div>
+              <div>
+                <a href="https://your-tour-jade.vercel.app/" class="transition-all hover:text-white">YourTour</a>
+              </div>
+            </div>
+          </div>
+          <!-- contact -->
+          <div id="contact" class="hidden flex-col justify-end w-screen h-full gap-10">
+            <section class="marquee flex w-full overflow-hidden font-BebasNeue text-[100px] md:text-[200px] lg:text-[300px]">
+              <div class="marquee-inner min-w-full flex-auto flex-grow-0 flex-shrink-0 gap-10">
+                <div class="marquee-content inline-block">
+                  LET'S
+                  <span class="text-red-600">TALK</span>
+                </div>
+              </div>
+              <div class="marquee-inner min-w-full flex-auto flex-grow-0 flex-shrink-0 gap-10">
+                <div class="marquee-content inline-block">
+                  LET'S
+                  <span class="text-red-600">TALK</span>
+                </div>
+              </div>
+            </section>
+            <section class="
+              flex flex-col justify-evenly items-center gap-10 py-10
+              md:items-start md:flex-row md:gap-0"
+            >
+              <div id="text-contact" class="
+                w-4/5 text-xl text-center
+                md:w-5/12 md:text-2xl md:text-left lg:text-4xl leading-snug"
+              >Let's discuss how I can help bring your project to life, considering your ideas and requirements!
+              </div>
+              <nav id="follower-container" class="
+                relative w-full font-BebasNeue text-5xl mb-20 text-red-600 text-center
+                md:text-right md:w-auto lg:text-6xl"
+              >
+                <div><a href="mailto:anton532202@gmail.com" class="transition-all hover:text-white">GMAIL</a></div>
+                <div><a href="https://t.me/ant0nelagin" class="transition-all hover:text-white">TELEGRAM</a></div>
+                <div><a href="https://wa.clck.bar/79520872700" class="transition-all hover:text-white">WHATSAPP</a></div>
+                <img
+                  id="follower"
+                  class="absolute left-0 top-0 border-2 border-solid border-red-600 rounded-full invisible"
+                  src="./src/assets/avatar.png"
+                  alt="avatar"
+                >
+              </nav>
+            </section>
+          </div>
+          <!-- about -->
+          <div id="about" class="scrollable flex flex-col justify-center items-center w-screen h-full overflow-y-auto">
+            <div id="scrolling-about" class="flex flex-col xl:w-4/5 px-10 z-10 mt-[50%]">
+              <div class="marquee flex w-24 overflow-hidden text-base bg-red-600 text-black font-medium">
+                <div class="marquee-inner min-w-full flex-auto flex-grow-0 flex-shrink-0 gap-10">
+                  <div class="marquee-content inline-block">About me</div>
+                </div>
+                <div class="marquee-inner min-w-full flex-auto flex-grow-0 flex-shrink-0 gap-10">
+                  <div class="marquee-content inline-block">About me</div>
+                </div>
+              </div>
+      
+              <div class="font-BebasNeue leading-tight text-3xl mb-32 sm:text-4xl md:text-6xl md:leading-tight xl:leading-tight xl:text-7xl text-white
+              2xl:text-8xl 2xl:leading-normal">
+                I specialize in <span class=" text-black bg-[#FE4B29] px-3">frontend</span> development,
+                focusing on creating beautiful and animated web interfaces. My goal is to make websites not only attractive but also user-friendly.
+                I use modern technologies to ensure that each project looks unique.
+              </div>
+              <div id="line" class="w-full h-px bg-white opacity-30"></div>
+              <footer class="flex justify-between mt-10 mb-20 md:mt-20 md:mb-32">
+                <div class="flex flex-col gap-2.5 items-start font-BebasNeue md:flex-row md:gap-10 md:items-center">
+                  <h3 class="text-3xl text-red-600 md:text-5xl">Ready to collaborate?</h3>
+                  <button class="contact text-2xl text-black bg-[#FE4B29] px-3 transition-all hover:bg-white md:text-3xl">Contact me</button>
+                </div>
+                <div>
+                  <div class="flex justify-end gap-1 font-BebasNeue text-2xl text-white uppercase">
+                    <img class="w-5" src="./src/assets/location.svg" alt="location">
+                    <span>location</span>
+                  </div>
+                  <div class="text-lg text-red-600">Russia, Tver</div>
+                </div>
+              </footer>
+            </div>
+            <img id="avatar-follower" class="absolute hidden left-0 top-0 z-0 opacity-40 md:block" src="./src/assets/avatar-rect.png" alt="avatar-rect">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
